@@ -7,35 +7,22 @@
  */
 int main(void)
 {
-	/* This variables are used as digits are looped to create the numbers*/
-	int i;
-	int j;
-	int k;
-	int l;
+	int first_number;
+	int second_number;
 
-	for (i = 0; i <= 9; i++)
+	for (first_number = 0; first_number < 100; first_number++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (second_number = first_number + 1; second_number < 100; second_number++)
 		{
-			for (k = 0; k <= 9; k++)
+			putchar((first_number / 10) + '0');
+			putchar((first_number % 10) + '0');
+			putchar(' ');
+			putchar((second_number / 10) + '0');
+			putchar((second_number % 10) + '0');
+			if (first_number != 98 || second_number != 99)
 			{
-				for (l = 0; l <= 9; l++)
-				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(l + '0');
-					/*
-					 * This condition is used to not insert the comma
-					 * and space after the last loop
-					 */
-					if (i != 9 || j != 8 || k != 9 || l != 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
