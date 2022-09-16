@@ -24,8 +24,8 @@ void more_numbers(void)
 				q = j;
 			}
 			_putchar(q + '0');
-			if (k > 9)
-				_putchar((k % 10) + '0');
+			if (j > 9)
+				_putchar((j % 10) + '0');
 		}
 		_putchar('\n');
 	}
