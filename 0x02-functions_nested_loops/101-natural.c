@@ -1,13 +1,22 @@
 #include <stdio.h>
 
 /**
- * sum_of_multiples - calcutlate sum of multiples of 3 and 5
+ * main - check the code
  *
- * @n: natural number range
  *
- * Return: nothing
+ * Return: Always 0
  */
 
+int main(void)
+{
+	sum_of_multiples();
+	return (0);
+}
+
+/**
+ * sum_of_multiples - calculate sum of multiples of 3 and 5
+ *
+ */
 void sum_of_multiples(void)
 {
 	int i, sum;
