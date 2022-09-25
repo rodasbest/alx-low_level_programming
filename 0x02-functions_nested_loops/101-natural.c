@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	sum_of_multiples();
+	sum_of_multiples(void);
 	return (0);
 }
 
