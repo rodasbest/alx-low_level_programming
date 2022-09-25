@@ -9,16 +9,6 @@
 
 int main(void)
 {
-	sum_of_multiples(void);
-	return (0);
-}
-
-/**
- * sum_of_multiples - calculate sum of multiples of 3 and 5
- *
- */
-void sum_of_multiples(void)
-{
 	int i, sum;
 
 	sum = 0;
@@ -29,6 +19,7 @@ void sum_of_multiples(void)
 			sum += i;
 		}
 	}
-
 	printf("%d\n", sum);
+
+	return (0);
 }
