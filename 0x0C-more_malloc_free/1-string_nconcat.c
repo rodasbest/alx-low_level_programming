@@ -1,22 +1,4 @@
 #include "main.h"
-/**
- * strleng - measure string length
- *
- * @str: string to be measured
- *
- * Return: string length
- */
-
-unsigned int strleng(char *str)
-{
-	int count;
-
-	count = 0;
-	while (str[count] != '\0')
-		count++;
-
-	return (count);
-}
 
 /**
  * string_nconcat - concateenates two strings up to n-bytes
@@ -31,25 +13,31 @@ unsigned int strleng(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	unsigned int i, concat_index = 0;
+	unsigned int len = n, i;
 
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
 
-	concat = malloc(sizeof(char) * (strleng(s1) + n + 1));
+	for (i = 0; s1[i]; i++)
+		len++;
+
+	concat = malloc(sizeof(char) * (len + 1));
 
 	if (concat == NULL)
 		return (NULL);
 
-	for (i = 0; i < strleng(s1); i++)
-		concat[concat_index++] = s1[i];
+	len = 0;
 
-	for (i = 0; i <= s2[i] && i < n; i++)
-		concat[concat_index++] = s2[i];
+	for (i = 0; s1[i]; i++)
+		concat[len++] = s1[i];
 
-	concat[concat_index] = '\0';
+	for (i = 0; s2[i] && i < n; i++)
+		concat[len++] = s2[i];
+
+	concat[len] = '\0';
 
 	return (concat);
 }
