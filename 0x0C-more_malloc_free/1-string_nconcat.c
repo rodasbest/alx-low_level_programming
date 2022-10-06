@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * strlen - measure string length
+ * strleng - measure string length
  *
  * @str: string to be measured
  *
@@ -37,9 +37,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	
+
 	concat = malloc(sizeof(char) * (strleng(s1) + n + 1));
-	
+
 	if (concat == NULL)
 		return (NULL);
 
