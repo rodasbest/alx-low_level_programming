@@ -18,10 +18,10 @@ void _print(char *str, int l)
 	{
 		if (str[i] != '0')
 			j = 1;
-		
+
 		if (j || i == l - 1)
 			_putchar(str[i]);
-		
+
 		i++;
 	}
 
@@ -67,7 +67,7 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 	{
 		return (NULL);
 	}
-	
+
 	return (dest);
 }
 
@@ -91,7 +91,7 @@ int check_for_digits(char **av)
 				return (1);
 		}
 	}
-	
+
 	return (0);
 }
 
@@ -135,10 +135,10 @@ int main(int argc, char *argv[])
 			_putchar(e[ti]);
 		exit(98);
 	}
-	
+
 	for (l1 = 0; argv[1][l1]; l1++)
 		;
-		
+
 	for (l2 = 0; argv[2][l2]; l2++)
 		;
 	ln = l1 + l2 + 1;
@@ -149,7 +149,7 @@ int main(int argc, char *argv[])
 			_putchar(e[ti]);
 		exit(98);
 	}
-	
+
 	init(a, ln - 1);
 	for (ti = l2 - 1, i = 0; ti >= 0; ti--, i++)
 	{
